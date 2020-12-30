@@ -33,6 +33,6 @@ jobs:
           git config user.name "Website Bot"
           git add .
           git commit -m "update website"
-          git remote add origin git@github.com:wasmino/wasmino-runtime.git
+          git remote add origin git@github.com:wasmino/wasmino-web-demo.git
           git branch -M main
           git push -f -u origin main
