@@ -1,0 +1,19 @@
+name: CI
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '12'
+      - uses: actions/checkout@v2
+      - name: Build Runtime Library
+        run: |
+          yarn install
+          cd runtime && yarn build
